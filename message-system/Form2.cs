@@ -16,5 +16,11 @@ namespace message_system
         {
             InitializeComponent();
         }
+
+        public string number;
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            lblNumber.Text = number;
+        }
     }
 }
