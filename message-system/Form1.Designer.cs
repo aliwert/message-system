@@ -55,6 +55,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Fuchsia;
             this.label1.Location = new System.Drawing.Point(73, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 19);
@@ -63,6 +64,7 @@
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.Color.Fuchsia;
             this.button1.Location = new System.Drawing.Point(167, 222);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 28);
@@ -73,6 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Fuchsia;
             this.label2.Location = new System.Drawing.Point(62, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 19);
