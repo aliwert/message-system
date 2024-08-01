@@ -40,6 +40,15 @@ namespace message_system
             lblNumber.Text = number;
             inbox();
             sent();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select Name,Surname from TBLPEOPLE where number=" + number, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lblNameSurname.Text = dr[0] + " " + dr[1];
+            }
+            con.Close();
         }
     }
 }
