@@ -30,15 +30,16 @@ namespace message_system
         }
         void sent()
         {
-            SqlDataAdapter da2 = new SqlDataAdapter("Select * From Tblmessages WHERE RECEIVER=" + number, con);
+            SqlDataAdapter da2 = new SqlDataAdapter("Select * From Tblmessages WHERE SENDER=" + number, con);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
-            dataGridView1.DataSource = dt2;
+            dataGridView3.DataSource = dt2;
         }
         private void Form2_Load(object sender, EventArgs e)
         {
             lblNumber.Text = number;
             inbox();
+            sent();
         }
     }
 }
