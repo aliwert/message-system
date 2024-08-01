@@ -59,7 +59,10 @@ namespace message_system
             cmd.Parameters.AddWithValue("@p2", mskdReceiver.Text);
             cmd.Parameters.AddWithValue("@p3", txtTitle.Text);
             cmd.Parameters.AddWithValue("@p4", rchTxtCntnt.Text);
-
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Sent");
+            inbox();
         }
     }
 }
