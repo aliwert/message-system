@@ -40,13 +40,13 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.rchTxtCntnt = new System.Windows.Forms.RichTextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.mskdReceiver = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -157,9 +157,9 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.richTextBox1);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.maskedTextBox1);
+            this.groupBox3.Controls.Add(this.rchTxtCntnt);
+            this.groupBox3.Controls.Add(this.txtTitle);
+            this.groupBox3.Controls.Add(this.mskdReceiver);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(15, 459);
             this.groupBox3.Name = "groupBox3";
@@ -168,47 +168,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Message Panel";
             // 
-            // button1
+            // label5
             // 
-            this.button1.Location = new System.Drawing.Point(94, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 36);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Send";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(509, 26);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(796, 154);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(94, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 27);
-            this.textBox1.TabIndex = 2;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(94, 34);
-            this.maskedTextBox1.Mask = "0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(251, 27);
-            this.maskedTextBox1.TabIndex = 1;
-            this.maskedTextBox1.ValidatingType = typeof(int);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Receiver:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(376, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 19);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Message Content:";
             // 
             // label3
             // 
@@ -219,14 +186,48 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Title";
             // 
-            // label5
+            // button1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(376, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 19);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Message Content:";
+            this.button1.Location = new System.Drawing.Point(94, 129);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 36);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Send";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // rchTxtCntnt
+            // 
+            this.rchTxtCntnt.Location = new System.Drawing.Point(509, 26);
+            this.rchTxtCntnt.Name = "rchTxtCntnt";
+            this.rchTxtCntnt.Size = new System.Drawing.Size(796, 154);
+            this.rchTxtCntnt.TabIndex = 3;
+            this.rchTxtCntnt.Text = "";
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.Location = new System.Drawing.Point(94, 79);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(251, 27);
+            this.txtTitle.TabIndex = 2;
+            // 
+            // mskdReceiver
+            // 
+            this.mskdReceiver.Location = new System.Drawing.Point(94, 34);
+            this.mskdReceiver.Mask = "0000";
+            this.mskdReceiver.Name = "mskdReceiver";
+            this.mskdReceiver.Size = new System.Drawing.Size(251, 27);
+            this.mskdReceiver.TabIndex = 1;
+            this.mskdReceiver.ValidatingType = typeof(int);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Receiver:";
             // 
             // Form2
             // 
@@ -275,9 +276,9 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.RichTextBox rchTxtCntnt;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.MaskedTextBox mskdReceiver;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;

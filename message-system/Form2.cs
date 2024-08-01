@@ -50,5 +50,16 @@ namespace message_system
             }
             con.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Insert into TBLMESSAGES(SENDER, RECEIVER, TITLE,CONTENTT) values(@p1,@p2,@p3,@p4)", con);
+            cmd.Parameters.AddWithValue("@p1", number);
+            cmd.Parameters.AddWithValue("@p2", mskdReceiver.Text);
+            cmd.Parameters.AddWithValue("@p3", txtTitle.Text);
+            cmd.Parameters.AddWithValue("@p4", rchTxtCntnt.Text);
+
+        }
     }
 }
